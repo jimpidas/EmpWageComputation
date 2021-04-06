@@ -41,7 +41,7 @@ totalWorkingDay=$(($totalWorkingDay+1))
 randomCheck=$((RANDOM%3))
 empWorkingHrs="$( to_get_workHrs $randomCheck )"
 totalEmpHours=$(($totalEmpHours+$empWorkingHrs))
-dailyWage[$totalWorkingDay]=$( to_get_workHrs $empWorkingHrs)
+dailyWage[$totalWorkingDay]=$( getEmpWage $empWorkingHrs)
 done
 
 totalSalary=$(($totalEmpHours*$empWagePerHr))
